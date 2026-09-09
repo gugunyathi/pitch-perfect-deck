@@ -473,7 +473,7 @@ function Slide10() {
   const quarters = [
     {
       a: "primary" as Accent,
-      q: "Q1 2026 • Batches 004",
+      q: "Q1 2026 • Cohort",
       h: "Testnet & audits",
       items: [
         "Base Batches 004 cohort",
