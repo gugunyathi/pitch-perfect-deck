@@ -4,8 +4,8 @@ import { SLIDE_H, SLIDE_W } from "@/components/SlideFrame";
 import { slides } from "@/components/slides";
 
 // A4 landscape at 96dpi
-const PAGE_W = 1122.5;
-const PAGE_H = 793.7;
+const PAGE_W = 1110;
+const PAGE_H = 780;
 const SCALE = Math.min(PAGE_W / SLIDE_W, PAGE_H / SLIDE_H);
 
 export const Route = createFileRoute("/print")({
@@ -52,7 +52,7 @@ function PrintDeck() {
         </button>
       </div>
 
-      <div className="mx-auto w-fit pb-10">
+      <div className="mx-auto w-fit pb-10 print:pb-0">
         {slides.map((s) => (
           <div
             key={s.id}
