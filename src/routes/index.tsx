@@ -52,7 +52,7 @@ function DeckPage() {
   }, [go]);
 
   useEffect(() => {
-    document.title = `${index + 1}/${total} — ${slides[index].title} • ZEEXonchain`;
+    document.title = `${index + 1}/${total} — ${slides[index]?.title ?? "Deck"} • ZEEXonchain`;
   }, [index, total]);
 
   return (
@@ -89,7 +89,7 @@ function DeckPage() {
 
       <section className="flex-1 px-4 py-6">
         <div className="mx-auto h-[min(76vh,860px)] w-full max-w-[1500px]">
-          <ScaledSlide>{slides[index].render()}</ScaledSlide>
+          <ScaledSlide>{slides[index]?.render()}</ScaledSlide>
         </div>
 
         <div className="mx-auto mt-5 flex max-w-[1500px] items-center justify-between gap-4">
